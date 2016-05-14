@@ -24,8 +24,6 @@ export default class World extends Component {
   }
 
   getComponentByState(player) {
-    console.log(player);
-
     if (player) {
       return (
         <Life player={player}/>
