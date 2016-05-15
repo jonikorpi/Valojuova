@@ -15,7 +15,7 @@ export default class Text extends Component {
 
   }
 
-  getLines(text, style, weight, size, height, color, onClick, lineHeight) {
+  getLines(text, style, weight, size, height, color, doOnClick, lineHeight) {
     let texts;
 
     if (typeof text === "string") {
@@ -43,7 +43,7 @@ export default class Text extends Component {
               color: color || "white",
               shader: "flat",
             }}
-            onClick={onClick}
+            onClick={doOnClick}
             position={[
               0,
               -lineHeight * size * i,
@@ -71,7 +71,7 @@ export default class Text extends Component {
           this.props.size || 0.3,
           this.props.height,
           this.props.color,
-          this.props.onClick,
+          this.props.doOnClick,
           this.props.lineHeight || 1.382,
         )}
 

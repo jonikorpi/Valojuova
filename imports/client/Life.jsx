@@ -17,12 +17,19 @@ export default class Life extends Component {
 
   }
 
+  test() {
+    console.log("test");
+  }
+
   render() {
     return (
       <Entity id="life">
 
         <Rotator rotation={[20,0,0]}>
-          <Text text={["Hello", "there."]}/>
+          <Text
+            text={["Hello", "there."]}
+            doOnClick={this.test}
+          />
         </Rotator>
 
       </Entity>
