@@ -16,7 +16,7 @@ Variables.heroesPerParty = 3;
 
 Variables.gridRadius = 4;
 Variables.UIRadius = Variables.gridRadius - 1;
-Variables.gridThickness = 0.004;
+Variables.gridThickness = 0.003;
 
 Variables.tileSize = 0.3;
 Variables.tileSizeFactor = 0.91;
@@ -31,15 +31,13 @@ Variables.heroDepth = Variables.heroUnit * 0.618;
 //
 // Camera
 
-Variables.cameraPositionAngle = (Math.atan(4/3) * 180 / Math.PI); // https://en.wikipedia.org/wiki/Pythagorean_triple#Examples
 Variables.clipRange = 1000;
 Variables.screenFOV = 90;
 Variables.VRFOV = 80;
 
-Variables.cursorDistance = Variables.UIRadius - 1;
-Variables.cursorSize = Variables.cursorDistance / 40;
-Variables.cursorThickness = 0.764;
-Variables.cursorShrink = 0.618;
+Variables.cursorSize = 0.05;
+Variables.cursorLineThickness = 0.125;
+Variables.cursorActive = 1.618;
 
 //
 // Animations
