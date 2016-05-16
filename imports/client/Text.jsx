@@ -30,6 +30,7 @@ export default class Text extends Component {
         return (
           <Entity
             class="text-line"
+            key={i}
             text={{
               text: line,
               style: style || "normal",
@@ -46,7 +47,7 @@ export default class Text extends Component {
             onClick={doOnClick}
             position={[
               0,
-              -lineHeight * size * i,
+              -lineHeight * i,
               0,
             ]}
           />
@@ -55,11 +56,48 @@ export default class Text extends Component {
     );
   }
 
+  getPosition(position, size) {
+    const offset = (size / 2);
+
+    if (position) {
+      return [
+        position[0],
+        position[1] - offset,
+        position[2],
+      ];
+    }
+    else {
+      return [
+        0,
+        0 - offset,
+        0,
+      ];
+    }
+  }
+
+  getLineHeight(lineHeight, size) {
+    if (lineHeight) {
+      return lineHeight * size;
+    }
+    else {
+      return 1.382 * size;
+    }
+  }
+
+  getSize(size) {
+    return size || 0.25;
+  }
+
   render() {
     return (
       <Entity
         class="text-block"
-        position={this.props.position || [0,0,0]}
+        position={
+          this.getPosition(
+            this.props.position,
+            this.getSize(this.props.size)
+          )
+        }
         rotation={this.props.rotation || [0,0,0]}
         look-at={this.props.lookAtCamera ? "#camera" : ""}
       >
@@ -68,11 +106,11 @@ export default class Text extends Component {
           this.props.text,
           this.props.style,
           this.props.weight,
-          this.props.size || 0.3,
+          this.getSize(this.props.size),
           this.props.height,
           this.props.color,
           this.props.doOnClick,
-          this.props.lineHeight || 1.382,
+          this.getLineHeight(this.props.lineHeight, this.getSize(this.props.size)),
         )}
 
       </Entity>
