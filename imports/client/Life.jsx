@@ -13,8 +13,8 @@ export default class Life extends Component {
     super();
   }
 
-  componentDidMount() {
-
+  componentDidUpdate() {
+    console.log("life updated");
   }
 
   test() {

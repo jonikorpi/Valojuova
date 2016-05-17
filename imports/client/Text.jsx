@@ -11,8 +11,8 @@ export default class Text extends Component {
     super();
   }
 
-  componentDidMount() {
-
+  componentDidUpdate() {
+    console.log("text updated");
   }
 
   getLines(text, style, weight, size, height, color, doOnClick, lineHeight) {

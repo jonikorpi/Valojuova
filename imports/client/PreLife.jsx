@@ -20,8 +20,8 @@ export default class PreLife extends Component {
     };
   }
 
-  componentDidMount() {
-
+  componentDidUpdate() {
+    console.log("prelife updated");
   }
 
   createPlayer() {

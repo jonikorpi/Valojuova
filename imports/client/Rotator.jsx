@@ -6,6 +6,10 @@ import Variables from "../Variables";
 
 export default class Rotator extends Component {
 
+  componentDidUpdate() {
+    console.log("rotator updated");
+  }
+
   render() {
     return (
       <Entity

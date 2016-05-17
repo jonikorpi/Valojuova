@@ -23,6 +23,10 @@ export default class World extends Component {
 
   }
 
+  componentDidUpdate() {
+    console.log("world updated");
+  }
+
   getComponentByState(player) {
     if (player) {
       return (

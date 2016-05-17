@@ -6,6 +6,10 @@ import Variables from "../Variables";
 
 export default class Cursor extends Component {
 
+  componentDidUpdate() {
+    console.log("cursor updated");
+  }
+
   render() {
     return (
       <Entity id="cursor">

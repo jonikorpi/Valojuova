@@ -10,6 +10,10 @@ import Cursor from "./Cursor";
 
 export default class Camera extends Component {
 
+  componentDidUpdate() {
+    console.log("camera updated");
+  }
+
   render() {
     return (
       <Entity

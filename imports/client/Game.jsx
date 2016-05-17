@@ -62,6 +62,10 @@ export default class Game extends Component {
     window.removeEventListener("exit-vr", this.stopVR);
   }
 
+  componentDidUpdate() {
+    console.log("game updated");
+  }
+
   handleResize() {
     this.setState({
       width: this.react.getBoundingClientRect().width,
