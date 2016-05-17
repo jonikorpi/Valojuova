@@ -85,7 +85,7 @@ export default class Text extends Component {
   }
 
   getSize(size) {
-    return size || 0.25;
+    return size || Variables.targetFontSize;
   }
 
   render() {

@@ -5,17 +5,18 @@ Variables = {};
 export default Variables;
 
 //
-// Gameplay
+// TODO: Gameplay
 
 Variables.tilesPerRow = 9;
 Variables.tilesPerColumn = 6;
 Variables.heroesPerParty = 3;
 
 //
-// Visuals
+// TODO: Visuals
 
 Variables.gridRadius = 4;
 Variables.UIRadius = Variables.gridRadius - 1;
+Variables.UISpace = Variables.gridRadius - Variables.UIRadius;
 Variables.gridThickness = 0.003;
 
 Variables.tileSize = 0.3;
@@ -29,9 +30,18 @@ Variables.heroWidth = Variables.heroUnit * 2.333;
 Variables.heroDepth = Variables.heroUnit * 0.618;
 
 //
+// Targets
+
+Variables.targetRadius = 0.1618;
+Variables.targetThickness = 0.764;
+Variables.targetMargin = Variables.targetRadius * 1.618;
+Variables.targetFontSize = Variables.targetRadius * Math.pow(1.618, 1);
+
+//
 // Camera
 
-Variables.clipRange = 1000;
+Variables.AU = 149597870700;
+Variables.clipRange = Variables.AU * 5;
 Variables.screenFOV = 90;
 Variables.VRFOV = 80;
 

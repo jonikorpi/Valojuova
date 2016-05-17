@@ -22,7 +22,7 @@ export default class Rotator extends Component {
           position={[
             0,
             0,
-            -this.props.distance || -Variables.UIRadius,
+            -this.props.distance || -Variables.UIRadius - Variables.UISpace * 0.5,
           ]}
         >
 
